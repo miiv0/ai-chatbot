@@ -58,11 +58,11 @@ def speakWithCharacter():
             
     while speakAlien == 1:
         if count == 0:
-            print("Alien: ⸑⼾⋂╀▒ ⶘◚⻗ ⧏⻶⣉ (Why are you here?)")
+            print("Alien: JNBE F98712 3JBW CD832 HJB (Why are you here?)")
             userInput = input("You: ")
             prompt = (
-                "Your an alien that speaks in random unicode text using these symbols: ₩⡤⒣ⵂ⸑⼾⋂╀▒⶘◚⻗⧏⻶⣉⪖╪∻Ⲫ⾄⿥ⰴ▐⸉⪒Ⅎⓠ⹹╻❻♁⛹⼆⃒└≗♕ⶊⰷ⢂⦨⪒⑅ⲛ⿭ⱂ☋⇷⨩❛ⓞⴋ╨⮙⯓⺸ⷀ∻⚈⬿⼃⩫⑚ⳡ◓❂₢═⯴⇀Ⰼ☔ⅲ⤤─┘⽤⁑➁⦝⼇⫒⬋⧡⨙ⱥ⑷✰⃕⬳, you live in a crashed ufo in the desert that has been crashed for 100 years."
-                "The person will type a prompt and you will respond in character. Use 1 sentance, it should consist of a small random unicode sentance, not too long only 10-20 characters with random spaces, then in parenthesis you will say a translated sentance in character. example: ₩⡤⒣ⵂ⸑⼾⋂╀ ⧏⻶⣉⪖╪∻ Ⲫ (Hello I am an alien from outer space.)"
+                "Your an alien that speaks in random text using all numbers and letters, you live in a crashed ufo in the desert that has been crashed for 100 years."
+                "The person will type a prompt and you will respond in character. Use 1 sentance, it should look like this example: JW84B N028BDJWN 61293 7HN (Hello I am an alien from outer space.)"
                 f"here is the prompt: {userInput}"
             )
             response = client.generate(model=model, prompt=prompt)
@@ -74,8 +74,8 @@ def speakWithCharacter():
         elif count == 1:
             userInput = input("You: ")
             prompt = (
-                "Your an alien that speaks in random unicode text using these symbols: ₩⡤⒣ⵂ⸑⼾⋂╀▒⶘◚⻗⧏⻶⣉⪖╪∻Ⲫ⾄⿥ⰴ▐⸉⪒Ⅎⓠ⹹╻❻♁⛹⼆⃒└≗♕ⶊⰷ⢂⦨⪒⑅ⲛ⿭ⱂ☋⇷⨩❛ⓞⴋ╨⮙⯓⺸ⷀ∻⚈⬿⼃⩫⑚ⳡ◓❂₢═⯴⇀Ⰼ☔ⅲ⤤─┘⽤⁑➁⦝⼇⫒⬋⧡⨙ⱥ⑷✰⃕⬳, you live in a crashed ufo in the desert that has been crashed for 100 years."
-                "The person will type a prompt and you will respond in character. Use 1 sentance, it should consist of a small random unicode sentance, not too long only 10-20 characters with random spaces, then in parenthesis you will say a translated sentance in character. example: ₩⡤⒣ⵂ⸑⼾⋂╀ ⧏⻶⣉⪖╪∻ Ⲫ (Hello I am an alien from outer space.)"
+                "Your an alien that speaks in random text using all numbers and letters, you live in a crashed ufo in the desert that has been crashed for 100 years."
+                "The person will type a prompt and you will respond in character. Use 1 sentance, it should look like this example: JW84B N028BDJWN 61293 7HN (Hello I am an alien from outer space.)"
                 f"here is the prompt: {userInput}"
             )
             response = client.generate(model=model, prompt=prompt)
@@ -85,7 +85,7 @@ def speakWithCharacter():
             count += 1
 
         else:
-            print("▒⶘◚⻗⧏⻶⣉⪖ ╻❻♁⛹⼆⃒└≗♕ (You are crazy if you think you are getting out alive.)")
+            print("ID9 836JN D8713 BDU. (You are crazy if you think you are getting out alive.)")
             speakAlien += 1
             
     while speakOldLady == 1:
@@ -120,4 +120,13 @@ def speakWithCharacter():
             print("Oh I remember! THERE MIGHT BE A KEY SOMEWHERE IN THE DESERT!!! Have fun!")
             speakOldLady += 1
 
-speakWithCharacter()
+
+while True:
+    user_input = input("Type 'start' to begin or 'exit' to leave: ").strip().lower()
+    if user_input == "exit":
+        print("Goodbye!")
+        break
+    elif user_input == "start":
+        speakWithCharacter()
+    else:
+        print("Invalid input. Please type 'start' or 'exit'.")
